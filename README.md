@@ -2,6 +2,9 @@
 
 Collect and visualize [geth](https://github.com/ethereum/go-ethereum) metrics with prometheus and grafana.
 
+[Geth Issue](https://github.com/ethereum/go-ethereum/issues/17086)
+[Geth PR](https://github.com/ethereum/go-ethereum/pull/17077)
+
 ## Run example
 
 ```bash
