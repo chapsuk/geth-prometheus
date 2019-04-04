@@ -12,8 +12,8 @@ scrape_configs:
 - job_name: geth
   scrape_interval: 15s
   scrape_timeout: 10s
-  metrics_path: /
+  metrics_path: /debug/metrics/prometheus
   scheme: http
   static_configs:
   - targets:
-    - geth:9455
+    - geth:6060

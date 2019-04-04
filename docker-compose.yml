@@ -4,15 +4,16 @@ services:
 
   geth:
     image: chapsuk/geth:prometheus
+    container_name: dev_geth
     ports:
-      - "10455:9455"
-      - "10545:8545"
+      # - "10455:6060"
+      # - "10545:8545"
     cpus: 0.3
-    command: --rinkeby --rpc --rpcaddr="0.0.0.0" --rpcvhosts="geth" --metrics --metrics.prometheus --metrics.prometheus.addr="0.0.0.0:9455"
+    command: --rinkeby --rpc --rpcaddr="0.0.0.0" --rpcvhosts="geth" --pprof --pprofaddr=0.0.0.0 --pprofport=6060 --metrics
 
   grafana:
     image: grafana/grafana
-    container_name: dev_beibs_grafana
+    container_name: dev_geth_grafana
     ports:
       - "10007:3000"
     depends_on:
@@ -23,7 +24,7 @@ services:
 
   prometheus:
     image: prom/prometheus
-    container_name: dev_beibs_prometheus
+    container_name: dev_geth_prometheus
     ports:
       - "10008:9090"
     volumes:
