@@ -2,10 +2,10 @@
 
 Collect and visualize [geth](https://github.com/ethereum/go-ethereum) metrics with prometheus and grafana.
 
-Waiting:
 
-* [Proposal](https://github.com/ethereum/go-ethereum/issues/17086)
-* [Implementation](https://github.com/ethereum/go-ethereum/pull/17077)
+Available in geth with [commit](https://github.com/ethereum/go-ethereum/commit/31bc2a2434ed29b6cd020ee712722b4b865f32e1). 
+Expected release verion: `v1.9.0`
+Last `chapsuk/geth:prometheus` docker image [commit](https://github.com/ethereum/go-ethereum/commit/26b50e3ebe3be197c68763e71e41926ed7df0863).
 
 ## Run example
 
@@ -14,7 +14,7 @@ Waiting:
 ```
 
 Runs `geth --rinkeby`, prometheus and grafana.
-Open `localhost:10007` (admin:admin) for explore geth metrics dashboard.
+Open [127.0.0.1:10007](http://127.0.0.1:10007) (admin:admin) for explore geth metrics dashboard.
 
 ## Dashboard
 
@@ -22,8 +22,4 @@ Open `localhost:10007` (admin:admin) for explore geth metrics dashboard.
 
 ## Snapshot
 
-See dashboard [snapshot](https://snapshot.raintank.io/dashboard/snapshot/nxZB4UEhyo2zvMZNzBUfb7jlTAnE57fF?orgId=2).
-
-## TODOS
-
-* check and fix pannels units;
+See dashboard [snapshot](https://snapshot.raintank.io/dashboard/snapshot/WWFndg9Ca5Z6e5HzZ1yL3uveqhD7SvXJ).
