@@ -1,7 +1,6 @@
-version: '2.2'
+version: "2.2"
 
 services:
-
   geth:
     image: chapsuk/geth:prometheus
     container_name: dev_geth
@@ -9,7 +8,7 @@ services:
       - "10455:6060"
       # - "10545:8545"
     cpus: 0.3
-    command: --rinkeby --rpc --rpcaddr="0.0.0.0" --rpcvhosts="geth" --pprof --pprofaddr=0.0.0.0 --pprofport=6060 --metrics
+    command: --http --syncmode "light" --http.addr="0.0.0.0" --http.vhosts="geth" --pprof --pprof.addr=0.0.0.0 --pprof.port=6060 --metrics
 
   grafana:
     image: grafana/grafana
